@@ -1,1 +1,0 @@
-# lectspark.github.io
