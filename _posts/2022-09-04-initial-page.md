@@ -2,10 +2,11 @@
 published: false
 ---
 ---
-## Initial WebPage
+# Initial WebPage
 ---
 
-### Node.js + GraphQL + Socket.io
+
+### Node.js + GraphQL + Socket.io Examples
 
 ```javascript
 let express = require('express');
@@ -94,13 +95,11 @@ app.use('/graphql', graphqlHTTP({
 
 io.on('connection', (socket) => {
   console.log(socket.id, ' connected!!');
-  // socket.emit('msg', `[<-- ${socket.id}] connected!!`);
   socket.emit('msg', ({name:`[<-- ${socket.id}]`, message:" connected!!"}));
   
   socket.on('msg', ({name, message}) => {
     console.log(socket.id, {name, message});
     name = '[<-- ' + name + ']'
-    // io.emit('msg', ({name, message}));
     socket.broadcast.emit('msg', ({name, message}));
   });
 }); 
