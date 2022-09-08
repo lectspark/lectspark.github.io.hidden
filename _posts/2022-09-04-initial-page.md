@@ -1,9 +1,5 @@
----
-published: false
----
----
+
 # Node.js + GraphQL + Socket.io Examples
----
 
 
 ### index.js
