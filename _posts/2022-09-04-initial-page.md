@@ -2,11 +2,11 @@
 published: false
 ---
 ---
-# Initial WebPage
+# Node.js + GraphQL + Socket.io Examples
 ---
 
 
-### Node.js + GraphQL + Socket.io Examples
+### index.js
 
 ```javascript
 let express = require('express');
@@ -104,4 +104,37 @@ io.on('connection', (socket) => {
   });
 }); 
 
+```
+
+### package.json
+```json
+{
+  "name": "------",
+  "version": "1.0.0",
+  "description": "------",
+  "main": "index.js",
+  "mode": "commonjs",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix ..\\------",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "------",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "graphql-tool": "^1.0.0",
+    "socket.io": "^4.5.1",
+    "ws": "^8.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
 ```
