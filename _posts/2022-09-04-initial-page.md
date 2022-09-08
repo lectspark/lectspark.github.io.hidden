@@ -1,6 +1,6 @@
 
 # Node.js + GraphQL + Socket.io Examples
-========================================
+----------------------------------------
 
 > node.js 환경에서 GraphQL 방식의 API를 사용하여
 > socket.io를 WebSocket으로 사용하는 Chatting Server 예제
